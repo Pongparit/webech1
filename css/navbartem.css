@@ -1,0 +1,11 @@
+
+
+.navbar-nav>li>a.profile-image {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }

@@ -1,0 +1,105 @@
+<!-- หน้ารายวิชา ถ้าเป็นนักเรียนก็จะแสดงวิชาที่เรียน ถ้าเป็นอาจารย์ก็จแสดงวิชาที่สอน และถ้าเป็นอาจารย์จะสามารถกดเข้าไปดูรายลลเอียดวิชาและนักเรียนได้ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>เช็คชื่อ</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/navbartem.css">
+  <link rel="stylesheet" href="css/tem.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">ระบบจัดการนิสิต</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">หน้าหลัก</a></li>
+        <li class="active"><a href="sub.html">วิชา</a></li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+         <img src="http://placehold.it/18x18" class="profile-image img-circle"> ชื่อผู้ใช้ <b class="caret"></b></a>
+         <ul class="dropdown-menu">
+             <li><a href="profile.html"><i class="fa fa-cog"></i> ข้อมูลส่วนตัว</a></li>
+             <li class="divider"></li>
+             <li><a href="#"><i class="fa fa-sign-out"></i> ออกจากระบบ</a></li>
+         </ul>
+     </li>
+     </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+      <div class="row profile">
+      <div class="col-md-3">
+        <div class="profile-sidebar">
+          <!-- SIDEBAR USERPIC -->
+          <div class="profile-userpic">
+            <img src="http://placehold.it/200x200" class="img-responsive" alt="">
+          </div>
+          <!-- END SIDEBAR USERPIC -->
+          <!-- SIDEBAR USER TITLE -->
+          <div class="profile-usertitle">
+            <div class="profile-usertitle-name">
+              ชื่อผู้ใช้
+            </div>
+            <div class="profile-usertitle-job">
+              ตำแหน่ง
+            </div>
+          </div>
+          <!-- END SIDEBAR USER TITLE -->
+          <!-- SIDEBAR MENU -->
+          <div class="profile-usermenu">
+            <ul class="nav">
+              <li>
+                <a href="index.html">
+                <i class="glyphicon glyphicon-home"></i>
+                หน้าหลัก </a>
+              </li>
+              <li>
+                <a href="profile.html">
+                <i class="glyphicon glyphicon-user"></i>
+                ตั้งค่าผู้ใช้ </a>
+              </li>
+              <li class="active">
+                <a href="sub.html" >
+                <i class="glyphicon glyphicon-ok"></i>
+                รายวิชา </a>
+              </li>
+            </ul>
+          </div>
+          <!-- END MENU -->
+        </div>
+      </div>
+      <div class="col-md-9">
+              <div class="profile-content">
+                <table class="table table-responsive" id="subTable">
+       <thead>
+         <tr>
+           <th>รายวิชาที่ลงเรียน</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr tabindex="0" id="r0">
+           <td>ชื่อวิชา1</td>
+         </tr>
+         <tr tabindex="0">
+           <td>ชื่อวิชา2</td>
+         </tr>
+       </tbody>
+      </table>
+              </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
