@@ -1,0 +1,133 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>รายละเอียดนิสิต</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/navbartem.css">
+    <link rel="stylesheet" href="../css/tem.css">
+    <link rel="stylesheet" href="../css/searchbox.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link href="../css/bootstrap-editable.css" rel="stylesheet">
+  <script src="../js/bootstrap-editable.min.js"></script>
+  <script src="../js/sub_d.js"></script>
+  </head>
+  <body>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">ระบบจัดการนิสิต</a>
+      </div>
+      <div class="col-sm-3 col-md-3 pull-left">
+		<form class="navbar-form" role="search">
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="ค้นหา" name="srch-term" id="srch-term">
+			<div class="input-group-btn">
+				<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+			</div>
+		</div>
+		</form>
+		</div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+         <img src="http://placehold.it/18x18" class="profile-image img-circle"> ชื่อผู้ใช้ <b class="caret"></b></a>
+         <ul class="dropdown-menu">
+             <li><a href="../profile.html"><i class="fa fa-cog"></i> แก้ไขข้อมูลส่วนตัว</a></li>
+             <li class="divider"></li>
+             <li><a href="#"><i class="fa fa-sign-out"></i> ออกจากระบบ</a></li>
+         </ul>
+     </li>
+     </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+      <div class="row profile">
+  		<div class="col-md-3">
+  			<div class="profile-sidebar">
+  				<!-- SIDEBAR USERPIC -->
+  				<div class="profile-userpic">
+  					<img src="http://placehold.it/200x200" class="img-responsive" alt="">
+  				</div>
+  				<!-- END SIDEBAR USERPIC -->
+  				<!-- SIDEBAR USER TITLE -->
+  				<div class="profile-usertitle">
+  					<div class="profile-usertitle-name">
+  						ชื่อผู้ใช้
+  					</div>
+  					<div class="profile-usertitle-job">
+  						ตำแหน่ง
+  					</div>
+  				</div>
+  				<!-- END SIDEBAR USER TITLE -->
+  				<!-- END MENU -->
+  			</div>
+  		</div>
+
+
+      <div class="col-md-9">
+              <div class="profile-content">
+                            <img src="http://placehold.it/100x100" alt="stack photo" class="img">
+                            <h2>ชื่อ นามสกุล</h2>
+                            <h3><p><span class="glyphicon glyphicon-envelope one" style="width:50px;"></span>อีเมล@เมล.คอม</p></h3>
+                    <p>ค้นหารายวิชาที่เรียน</p>
+                    <div class="col-xs-2">
+                      <select class="form-control" id="sel1">
+<option>ปี</option>
+<option>2017</option>
+<option>2016</option>
+<option>2015</option>
+</select>
+                    </div>
+                    <div class="col-xs-3">
+                      <select class="form-control" id="sel2">
+<option>เทอมต้น</option>
+<option>เทอมปลาย</option>
+<option>ฤดูร้อน</option>  </select>
+                    </div>
+                    <div class="col-xs-4">
+                      <div class="input-group stylish-input-group">
+                        <input type="text" class="form-control" placeholder="ค้นหาชื่อรายวิชา">
+
+                          <span class="input-group-addon">
+                              <button type="submit">
+                                  <span class="glyphicon glyphicon-search"></span>
+                              </button>
+                          </span>
+                      </div>
+                    </div>
+                <table class="table table-responsive" id="nisitTable">
+       <thead>
+         <tr>
+           <th>ปี</th>
+           <th>รหัสวิชา</th>
+           <th>ชื่อวิชา</th>
+           <th>เซค</th>
+           <th>เทอม</th>
+           <th>ความคิดเห็น</th>
+           <th>เกรด</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr tabindex="0" id="r0">
+           <td>2017</td>
+          <td>014xxxxx</td>
+           <td>วิชานู้นนี่นั่น</td>
+           <td>เซค</td>
+           <td>เทอมปลาย</td>
+           <td>ความเห็น</td>
+           <td>A</td>
+         </tr>
+       </tbody>
+      </table>
+              </div>
+      </div>
+    </div>
+  </div>
+
+
+</body></html>

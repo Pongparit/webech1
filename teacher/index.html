@@ -1,0 +1,167 @@
+<!-- หน้าแรกของอาจารย์ต่างจากของอาจารย์คือนักเรียนจะเช็คชื่อด้วย qrcode แต่ของอาจารย์เป็นการตรวจสอบจำนวนนักเรียน -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>หน้าแรก</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/navbartem.css">
+  <link rel="stylesheet" href="../css/tem.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">ระบบจัดการนิสิต</a>
+      </div>
+      <div class="col-sm-3 col-md-3 pull-left">
+		<form class="navbar-form" role="search">
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="ค้นหา" name="srch-term" id="srch-term">
+			<div class="input-group-btn">
+				<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+			</div>
+		</div>
+		</form>
+		</div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+         <img src="http://placehold.it/18x18" class="profile-image img-circle"> ชื่อผู้ใช้ <b class="caret"></b></a>
+         <ul class="dropdown-menu">
+             <li><a href="../profile.html"><i class="fa fa-cog"></i> แก้ไขข้อมูลส่วนตัว</a></li>
+             <li class="divider"></li>
+             <li><a href="#"><i class="fa fa-sign-out"></i> ออกจากระบบ</a></li>
+         </ul>
+     </li>
+     </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+      <div class="row profile">
+  		<div class="col-md-3">
+  			<div class="profile-sidebar">
+  				<!-- SIDEBAR USERPIC -->
+  				<div class="profile-userpic">
+  					<img src="http://placehold.it/200x200" class="img-responsive" alt="">
+  				</div>
+  				<!-- END SIDEBAR USERPIC -->
+  				<!-- SIDEBAR USER TITLE -->
+  				<div class="profile-usertitle">
+  					<div class="profile-usertitle-name">
+  						ชื่อผู้ใช้
+  					</div>
+  					<div class="profile-usertitle-job">
+  						ตำแหน่ง
+  					</div>
+  				</div>
+  				<!-- END SIDEBAR USER TITLE -->
+  				<!-- END MENU -->
+  			</div>
+  		</div>
+
+
+  		<div class="col-md-9">
+              <div class="profile-content">
+                <table class="table table-responsive" id="checkTable">
+       <thead>
+         <tr>
+           <th>เช็คชื่อวิชา</th>
+           <th>
+             <div class="col-xl-2">
+               <select class="form-control" id="sel1">
+<option>ปี</option>
+<option>2017</option>
+<option>2016</option>
+<option>2015</option>
+</select>
+</th>
+<th>
+             </div>
+             <div class="col-xl-3">
+               <select class="form-control" id="sel2">
+<option>เทอมต้น</option>
+<option>เทอมปลาย</option>
+<option>ฤดูร้อน</option>  </select>
+             </div>
+             </th>
+             <th>
+             <div class="col-xl-4">
+               <a class="btn btn-primary btn-sm" >ค้นหา</a>
+             </div>
+
+
+</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr tabindex="0" id="r0">
+           <td>รหัสวิชา</td>
+           <td>ชื่อวิชา1</td>
+           <td>เซค</td>
+           <td><a class="btn btn-success btn-xs" id="checktable"  data-toggle="modal" data-target="#QRpop">generate QR Code</a></td>
+           <td class="text-right"><p id="status_check" style="display:inline">ยังไม่ได้ตรวจสอบ</p> <a data-toggle="modal" data-target="#checkNisit"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></td>
+         </tr>
+       </tbody>
+     </table>
+              </div>
+  		</div>
+  	</div>
+
+    <div class="modal fade" id="QRpop" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" id="code_text">QR Code Generate</h4>
+        </div>
+        <div class="modal-body" style="text-align: center">
+          <p id="code_text" style="font-size: 50px">XXXXXX</p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Qr-2.png" id="QRcode" height="200" width="200">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal fade" id="checkNisit" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title" id="code_text">Check Nisit</h4>
+      </div>
+      <div class="modal-body" >
+        Nisit checked by QRCode :
+        <p id="nisit_num_qr" style="display:inline">XX</p> / <p id="amount_nisit" style="display:inline">50</p>
+        <p></p>
+        <input type="text" name="" value="" placeholder="confirm number of nisit" > <input type="button" name="" value="confirm">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+  </div>
+
+
+
+</body>
+</html>
