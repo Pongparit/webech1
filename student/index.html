@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="../css/tem.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/tablesubselect.js"></script>
   </head><body>
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
@@ -125,6 +125,12 @@
             <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
           </div>
         </div>
+
+        <script type="text/javascript">
+        $("#checkNisit").draggable({
+handle: ".modal-header"
+});
+        </script>
 
       </div>
     </div>
